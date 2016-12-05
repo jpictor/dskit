@@ -53,7 +53,7 @@ class Job(SparkSQLJob):
                    count(m.id) as message_count
         from       identity_user u
         join       notification_message m on m.user_id = u.id
-        group by   u.id, u.username, u.email,
+        group by   u.id, u.username, u.email
         order by   message_count desc
         """
 

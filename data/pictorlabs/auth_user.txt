@@ -1,0 +1,3 @@
+{"username":"jpainter","first_name":"","last_name":"","is_active":true,"email":"jay.painter@gmail.com","is_superuser":true,"is_staff":true,"last_login":1480447715,"password":"Ve5rXfwwAp9xtjZE30DXsEpLNU3LG8\/q+U=","id":1,"date_joined":1473635725}
+{"username":"george","first_name":"","last_name":"","is_active":true,"email":"","is_superuser":false,"is_staff":false,"last_login":1475505365,"password":"yeH3l7w28j97+EhO8PH7fXdA0b7HTCfEi\/Chk=","id":2,"date_joined":1475181228}
+{"username":"matthew","first_name":"","last_name":"","is_active":true,"email":"","is_superuser":true,"is_staff":true,"last_login":1477005909,"password":"P50X16OBl877W9+Arhvi\/WFEM3q4ZE7kBUs=","id":3,"date_joined":1477005752}

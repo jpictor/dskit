@@ -70,6 +70,18 @@ This example is run with the command:
 $ ./manage.sh submit examples/messages_per_user.py --output-type=csv --output-path=user_messages.csv /disk/data/
 ```
 
+### Useful Spark SQL User Defined Functions
+
+Time is stored in databases in various ways.  The example above uses the Spark SQL function
+`datetime_from_timestamp` to convert time stored in unix timestamp seconds to a Python
+datetime instance in the Spark RDD result rows.  This is not a standard Spark SQL function.
+It's a user defined function (UDF) added automatically by `SparkSQLJob`.  There are three UDF
+functions for manipulating time fields registered:
+
+* datetime_from_isodate: convert ISO date-time strings into a Python datetime instance
+* timestamp_from_isodate: convert ISO date-time strings into UNIX time stamps, which are the number of seconds since Jan 1, 1970
+* datetime_from_timestamp: convert UNIX time stamp into a Python datetime instance
+
 ## Installation Instructions
 
 ```bash
@@ -78,9 +90,9 @@ $ ./manage.sh build_all
 
 ## Run Example
 
-There is sample data in the data/ directory from a Django database: data/pictorlabs/auth_user.txt.
-This data was exported from the database using the pg2json command.  The auth_user.txt data contains
-the rows from the auth_user database table in JSON format one row per line.  Each line is a JSON
+There is sample data in the data/ directory from a Django database: `data/pictorlabs/auth_user.txt`.
+This data was exported from the database using the `pg2json` command.  The auth_user.txt data contains
+the rows from the `auth_user` database table in JSON format one row per line.  Each line is a JSON
 hash with the keys the database column names.
 
 The sample run a Spark SQL query on the sample data and outputs a CSV file.  Run the sample:

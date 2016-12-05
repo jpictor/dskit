@@ -35,12 +35,8 @@ def timestamp_from_isodate(iso_date_str):
     return utctimestamp_from_datetime(dt)
 
 
-def datetime_from_timestamp(dt):
+def datetime_from_timestamp(timestamp):
     """
     Converts an integer timesamp (seconds since UTC Jan 1, 1970) to a Python datetime instance.
     """
-    if dt.tzinfo is None:
-        dt = dt.replace(tzinfo=pytz.utc)
-    dt_utc = dt.astimezone(pytz.utc)
-    time_span = dt_utc - UNIX_EPOCH_UTC
-    return time_span.total_seconds()
+    return datetime.datetime.utcfromtimestamp(timestamp).replace(tzinfo=pytz.utc)

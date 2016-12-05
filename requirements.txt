@@ -1,0 +1,10 @@
+boto
+psycopg2
+MySQL-python
+python-dateutil
+pytz
+isodate
+requests
+six
+ujson
+numpy

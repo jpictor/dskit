@@ -11,6 +11,12 @@ solves this problem by providing programs to dump service databases as JSON row 
 and then use those files as a unified Spark SQL data where big-data queries and map/reduce
 algorithms can be applied.
 
+## Presentation Slides
+
+[See the slides](https://docs.google.com/presentation/d/1PZiruH2OXDTDevMLwNVgKrEyPejEiro1KjHsgEcRcTE/edit?usp=sharing)
+for a short talk I gave on this.
+
+
 ### Data Dump Programs
 
 Let's say you have the following service databases: identity, notification, groups,

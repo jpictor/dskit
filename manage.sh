@@ -64,8 +64,6 @@ case "$1" in
         install_spark
         build_vpython
         activate_vpython
-        download_nltk_data
-        build_collectstatic
         ;;
     build_vpython)
         set -e
